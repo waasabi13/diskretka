@@ -80,10 +80,9 @@ namespace dz_3
             for (char c = 'a'; c <= 'f'; c++)
             {
                 c++;
-                char m = c++;
-                for (m = 'a';  m <= 'f'; m++)
+                for (char c0 = 'a'; c0 <= 'f'; c0++)
                 {
-                    if (m != c)
+                    if (c0 != c)
                     {
                         for (int pos1 = 0; pos1 < n; pos1++)
                         {
@@ -97,8 +96,8 @@ namespace dz_3
                                             continue;
                                         word[pos1] = c;
                                         word[pos2] = c;
-                                        word[pos21] = m;
-                                        word[pos22] = m;
+                                        word[pos21] = c0;
+                                        word[pos22] = c0;
 
                                         int[] other = new int[2];
                                         for (int i = 0, j = 0; i < n; i++)
@@ -116,7 +115,7 @@ namespace dz_3
                                             {
                                                 if (c1 != c2)
                                                 {
-                                                    if (c1 != c && c2 != c && c1 != m && c2 != m)
+                                                    if (c1 != c && c2 != c && c1 != c0 && c2 != c0)
                                                     {
                                                         word[other[0]] = c1;
                                                         word[other[1]] = c2;
